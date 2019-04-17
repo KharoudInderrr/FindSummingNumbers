@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace FindSummingNumbers
         {
             const int LEN = 100;
             ArrayList ListQ;
+            int AddUpToNumber = 0;
             public void Run(int AddUpToNumber)
 
                 {
@@ -27,7 +29,31 @@ namespace FindSummingNumbers
 
                 Random r = new Random();
 
+                ListQ = new ArrayList();
+                for(int i = 0; i<LEN; i++)
+                {
+                    ListQ.Add(r.Next(100));
+                }
+                this.findTwoNumbersThatAddUpTo(AddUpToNumber);
+
+
+
+
 }
+
+            public int  findTwoNumbersThatAddUpTo(int number)
+            {
+
+                number = AddUpToNumber;
+                return number;
+
+
+
+            }
+
+
+
+
         }
     }
 }
