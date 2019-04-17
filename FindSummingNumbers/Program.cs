@@ -14,7 +14,10 @@ namespace FindSummingNumbers
 
             new GeneralList().Run(57);
 
+
         }
+
+
 
 
         class GeneralList
@@ -28,28 +31,46 @@ namespace FindSummingNumbers
 
 
                 Random r = new Random();
-
+                AddUpToNumber = r.Next();
                 ListQ = new ArrayList();
                 for(int i = 0; i<LEN; i++)
                 {
                     ListQ.Add(r.Next(100));
+                   
                 }
                 this.findTwoNumbersThatAddUpTo(AddUpToNumber);
 
-
+                
 
 
 }
 
-            public int  findTwoNumbersThatAddUpTo(int number)
+            public void  findTwoNumbersThatAddUpTo(int number)
             {
-
-                number = AddUpToNumber;
-                return number;
-
+                foreach (int num1 in ListQ)
+                {
+                    int c, d;
+                c = num1;
+                foreach (int num2 in ListQ)
+                {
+                    d = num2;
+                    if (c + d== 57)
+                    {
+                        Console.WriteLine("The two numbers between 0 and 100 whose sum is 57 are found. Numbers are: " + c + " " + d);
+                    }
+                }
 
 
             }
+            Console.ReadLine();
+
+
+            }
+
+
+                
+
+
 
 
 
